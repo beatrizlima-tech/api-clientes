@@ -20,7 +20,7 @@ public class ApiClientesApplication implements CommandLineRunner {
 	/*
 		Método da interface CommandLineRunner que podemos usar para
 		executar algum tipo de rotina ou teste assim que o projeto
-		for inicializaod
+		for inicializado
 	 */
 
 	@Override
