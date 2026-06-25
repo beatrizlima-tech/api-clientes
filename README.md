@@ -2,34 +2,34 @@
 
 ![Java](https://img.shields.io/badge/Java-21-red?style=for-the-badge\&logo=openjdk)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.x-green?style=for-the-badge\&logo=springboot)
-![Build](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?style=for-the-badge\&logo=postgresql)
 ![Swagger](https://img.shields.io/badge/Swagger-OpenAPI-85EA2D?style=for-the-badge\&logo=swagger)
+![Build](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey?style=for-the-badge)
 
 ---
 
 # 📌 Sobre o projeto
 
-A API Clientes é uma aplicação backend desenvolvida com **Java** e **Spring Boot** para gerenciamento de clientes, oferecendo operações de cadastro, consulta, atualização e exclusão lógica de registros.
+A **API Clientes** é uma aplicação backend desenvolvida com **Java** e **Spring Boot** para gerenciamento de clientes, oferecendo operações completas de cadastro, consulta, atualização e exclusão lógica de registros.
 
-O projeto foi desenvolvido com foco na construção de APIs REST, integração com banco de dados PostgreSQL utilizando JDBC, organização em camadas e documentação utilizando Swagger/OpenAPI.
+O projeto foi desenvolvido com foco na construção de APIs REST, integração com banco de dados PostgreSQL utilizando JDBC, organização em camadas, documentação com Swagger/OpenAPI e comunicação com aplicações frontend.
 
 ---
 
 # 🚀 Funcionalidades
 
-* ✅ Cadastro de clientes
-* ✅ Atualização de clientes
-* ✅ Exclusão lógica de clientes
-* ✅ Consulta de clientes por nome
-* ✅ Integração com PostgreSQL
-* ✅ Documentação da API com Swagger/OpenAPI
-* ✅ Configuração de CORS para integração com aplicações frontend
+* Cadastro de clientes
+* Atualização de clientes
+* Exclusão lógica de clientes
+* Consulta de clientes por nome
+* Integração com PostgreSQL
+* Documentação da API com Swagger/OpenAPI
+* Configuração de CORS para integração com aplicações frontend
 
 ---
 
-# 🧱 Tecnologias Utilizadas
+# 🧱 Tecnologias utilizadas
 
 * Java 21
 * Spring Boot
@@ -42,7 +42,7 @@ O projeto foi desenvolvido com foco na construção de APIs REST, integração c
 
 ---
 
-# 🏗️ Estrutura do Projeto
+# 🏗️ Estrutura do projeto
 
 ```text
 src/main/java/br/com/cotiinformatica/api_clientes/
@@ -59,38 +59,44 @@ src/main/java/br/com/cotiinformatica/api_clientes/
 
 # 🔗 Endpoints da API
 
-## Clientes
-
 | Método | Endpoint                  | Descrição                 |
 | ------ | ------------------------- | ------------------------- |
 | POST   | `/api/v1/clientes`        | Cadastrar cliente         |
 | PUT    | `/api/v1/clientes/{id}`   | Atualizar cliente         |
-| DELETE | `/api/v1/clientes/{id}`   | Realizar exclusão lógica  |
+| DELETE | `/api/v1/clientes/{id}`   | Exclusão lógica           |
 | GET    | `/api/v1/clientes/{nome}` | Buscar clientes pelo nome |
 
 ---
 
-# ⚙️ Como Executar o Projeto
+# 📷 Interface
 
-## 1. Clonar o repositório
+Esta API possui uma aplicação frontend desenvolvida em Angular para consumo dos serviços.
+
+**Frontend:**
+
+👉 https://github.com/beatrizlima-tech/web-clientes
+
+> Em breve serão adicionadas capturas de tela demonstrando a integração entre frontend e backend.
+
+---
+
+# ⚙️ Como executar o projeto
+
+### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/beatrizlima-tech/api-clientes.git
 ```
 
----
-
-## 2. Criar o banco de dados
+### 2. Crie o banco de dados
 
 ```sql
 CREATE DATABASE clientesdb;
 ```
 
-Execute também o script de criação da tabela disponível no projeto.
+Execute também o script SQL disponível no projeto para criação da tabela.
 
----
-
-## 3. Configurar o arquivo `application.properties`
+### 3. Configure o arquivo `application.properties`
 
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/clientesdb
@@ -98,17 +104,19 @@ spring.datasource.username=postgres
 spring.datasource.password=postgres
 ```
 
----
-
-## 4. Executar a aplicação
+### 4. Execute a aplicação
 
 ```bash
 mvn spring-boot:run
 ```
 
+A API ficará disponível na porta configurada da aplicação.
+
 ---
 
-## 5. Acessar a documentação
+# 📚 Documentação
+
+Após iniciar a aplicação, acesse:
 
 ```text
 http://localhost:8080/swagger-ui.html
@@ -119,7 +127,7 @@ http://localhost:8080/swagger-ui.html
 # 📊 Arquitetura
 
 ```text
-Cliente (Frontend)
+Frontend Angular
         │
         ▼
 Controller
@@ -136,21 +144,24 @@ PostgreSQL
 
 ---
 
-# 📌 Melhorias Futuras
+# 📌 Melhorias futuras
 
-* [ ] Migrar JDBC para Spring Data JPA
-* [ ] Implementar autenticação com JWT
-* [ ] Adicionar Bean Validation
-* [ ] Criar testes automatizados
-* [ ] Dockerizar a aplicação
-* [ ] Padronizar respostas HTTP da API
-* [ ] Implementar tratamento global de exceções
+* Migrar JDBC para Spring Data JPA
+* Implementar autenticação JWT
+* Adicionar Bean Validation
+* Criar testes automatizados
+* Dockerizar a aplicação
+* Padronizar respostas HTTP
+* Implementar tratamento global de exceções
 
 ---
 
 # 👩‍💻 Autora
 
-**Beatriz Lima de Oliveira**
+Desenvolvido por **Beatriz Lima**
 
-🔗 GitHub:
+🔗 GitHub
 https://github.com/beatrizlima-tech
+
+💼 LinkedIn
+https://www.linkedin.com/in/beatrizlima-tech
